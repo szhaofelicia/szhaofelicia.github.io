@@ -87,3 +87,10 @@ googlescholar:
   name: Google Scholar
   profile_url_prefix: https://scholar.google.com/
   icon_svg: '<img src="https://img.icons8.com/material-sharp/24/000000/google-scholar.png"/>'
+
+
+
+email:
+  name: Email
+  profile_url_prefix: 
+  icon_svg: '<img src="https://img.icons8.com/metro/26/000000/email.png"/>'
