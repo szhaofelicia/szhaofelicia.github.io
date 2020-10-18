@@ -1,22 +1,10 @@
 <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>About Me</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've built.</p>
+<!-- <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've built.</p> -->
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+    \\
+    I am a Ph.D. student at VIDA center, supervised by Prof. Claudio Silva. 
+    My Primary research interests are in visual analytics on machine learning models and computer vision applied to video understanding. 
+    I have been working on explaining and improving the performance of the computer vision model on sports videos.
+</p>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-
-  {% if site.projects.exclude.archived && site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.archived %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'fork', false | sort: sort_order | reverse %}
-  {% else %}
-    {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
-  {% endif %}
-
-  {% for repository in filtered_repos | limit: site.projects.limit %}
-    {% unless site.projects.exclude.projects contains repository.name %}
-      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-        {% include repo-card.html %}
-      </div>
-    {% endunless %}
-  {% endfor %}
 </div>
